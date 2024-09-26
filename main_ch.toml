@@ -1,0 +1,92 @@
+[cv]
+name = "桑乾龙"
+email = "hacksonsang@gmail.com"
+website = "https://codefuturesql.top"
+school = "Wuhan University"
+# 路径
+avatar = ""
+
+[[interests]]
+text = "我目前的研究兴趣集中在移动端利用异构CPU上的任务调度和频率调整来满足用户的性能要求并降低功耗。此外，我还从事一些性能分析工作。我未来的研究将从传统应用转向机器学习任务。"
+
+[[educations]]
+school = "Wuhan University"
+major = "Computer Science and Technology"
+degree = "Ph.D."
+date = "2022.9 - now"
+footnote = ""
+
+[[educations]]
+school = "Wuhan University"
+major = "Cyber Science and Engineering"
+degree = "B.S."
+date = "2018.9 - 2022.6"
+footnote = ""
+
+
+[[jr_publications]]
+name = "QoE-Aware Power Management Via Scheduling and Governing Co-Optimization on Mobile Devices."
+where = "IEEE Transactions on Mobile Computing"
+author_list = "Qianlong Sang, Jinqi Yan, Rui Xie, Chuang Hu, Kun Suo, Dazhao Chen"
+abbr = "TMC"
+year = "2024"
+
+[[jr_publications]]
+name = "Incendio: Priority-based Scheduling for Alleviating Cold Start in Serverless Computing."
+where = "IEEE Transactions on Computers"
+abbr = "TC"
+author_list = "XinQuan Cai, Qianlong Sang, Chuang Hu, Yili Gong, Kun Suo, Xiaobo Zhou"
+year = "2024"
+
+
+[[h_projects]]
+name = "终端设备渲染管线的线程识别技术研究"
+company = "OPPO."
+role = "技术骨干"
+date = "2024.05 - 2025.04"
+points = ["分析Android渲染管线流程中存在的依赖关系", "系统各层级内部进行插桩抓取依赖"]
+status = "进行中"
+
+[[h_projects]]
+name = "终端设备性能功耗感知的调度调频技术"
+company = "OPPO."
+role = "技术骨干"
+date = "2021.12 - 2022.11"
+points = ["利用强化学习方法进行智能调频.", "结合调度和调频进行性能优化和功耗降低"]
+status = "已结项"
+
+
+[[projects]]
+name = "WHURISCV"
+url = "https://github.com/codefuturedalao/oscpu-framework"
+date = "2021.07 - 2021.10"
+desc = "A five stages riscv64-I CPU for ysyx in 2021"
+
+
+[[projects]]
+name = "WHUMIPS"
+url = "https://github.com/codefuturedalao/WHUMIPS"
+date = "2020.5 - 2020.8"
+desc = "A five stages mips CPU with cache for NSCSCC in 2020"
+
+
+[[internships]]
+company = "OPPO"
+jobtitle = "科研实习生"
+date = "2022.2 - 2022.5"
+points = ["性能分析", "功耗优化"]
+
+[[internships]]
+company = "一生一芯第三期"
+jobtitle = "助教"
+date = "2021.7 - 2021.10"
+points = ["解答学生对CPU设计的相关问题"]
+
+[[awards]]
+name = "乙等奖学金, 武汉大学, 2021"
+date = "2021"
+
+[[awards]]
+name = "三等奖, 龙芯杯团队赛, 2020"
+date = "2020"
+

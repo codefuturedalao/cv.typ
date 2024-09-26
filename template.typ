@@ -53,7 +53,7 @@
 }
 
 
-#let cv(name: "", phone: "", email: "", birthday: "", website: "", avatar: "", body) = {
+#let cv(name: "",  email: "", website: "", school: "", avatar: "", body) = {
   set document(title: name)
   set page(paper: "a4", margin: (x: 2.1cm, y: 1.2cm))
   set text(font: "LXGW WenKai", 0.9em, weight: "regular");
@@ -75,13 +75,6 @@
     #grid(
       columns: (auto, auto, auto, auto, auto, auto, auto),
       column-gutter: 0.8em,
-      link("")[
-        #box(image("./icons/phone.svg"))
-        #phone
-      ],
-      text(weight: "regular", baseline: 2pt)[
-        ·
-      ],
       link("mailto:" + email)[
         #box(image("./icons/envelope.svg"))
         #email
@@ -90,8 +83,8 @@
         ·
       ],
       link("")[
-        #box(image("./icons/birth.svg"))
-        #birthday
+        #box(image("./icons/school.png"))
+        #school
       ],
       text(weight: "regular", baseline: 2pt)[
         ·
@@ -105,9 +98,78 @@
   body
 }
 
+#let interests(interests) = {
+  section-header(title: "Research Interests", icon: "./icons/focus.png")
+  set text(1.05em)
+
+  for interest in interests {
+    block[
+      #text(interest.text)
+      #h(3pt)
+    ]
+  }
+  v(3pt)
+}
+
+#let jr_publications(me, publications) = {
+  section-header(title: "Journal Publications", icon: "./icons/jr_pub.png")
+  set text(1.05em)
+
+  let n = 1
+  for pub in publications {
+
+    block[
+	  #text("[" + str(n) + "]")
+	  #h(3pt)
+  	  #for author in pub.author_list.split(",") {
+		if author.contains(me) {
+			text(weight: "black", author + ",")
+		} else {
+			text(author + ",")
+	  	}
+	  }
+      #h(3pt)
+	  #text("\"" + pub.name + "\"")
+	  #h(3pt)
+	  #text(emph(pub.where))
+	  #h(1pt)
+	  #text("(")
+	  #text(weight: "black", emph(pub.abbr + " '" + pub.year.slice(-2)))
+	  #text(")")
+    ]
+	n = n + 1
+  }
+  v(3pt)
+}
+
+#let under_review(me, publications) = {
+  section-header(title: "Under Review", icon: "./icons/submission.png")
+  set text(1.05em)
+
+  let n = 1
+  for pub in publications {
+    block[
+	  #text("[" + str(n) + "]")
+	  #h(3pt)
+  	  #for author in pub.author_list.split(",") {
+		if author.contains(me) {
+			text(weight: "black", author + ",")
+		} else {
+			text(author + ",")
+	  	}
+	  }
+      #h(3pt)
+	  #text("\"" + pub.name + "\"")
+    ]
+	n = n + 1
+  }
+  v(3pt)
+}
+
+
 // 教育背景
 #let educations(educations) = {
-  section-header(title: "教育背景", icon: "./icons/education.svg")
+  section-header(title: "Education", icon: "./icons/education.svg")
   set text(1.05em)
 
   for education in educations {
@@ -117,6 +179,9 @@
       #education.major
       #h(1fr)
       #text(education.degree)
+	  #if education.footnote != "" {
+        footnote(education.footnote)
+      }
       #h(3pt)
       #text(0.9em, weight: "thin", emph(education.date))
       #v(-4pt)
@@ -127,8 +192,35 @@
 }
 
 // 项目经历
+#let h_projects(projects) = {
+  section-header(title: "Consulting Project", icon: "./icons/project.svg")
+
+  set list(indent: 1em, tight: true)
+
+  for project in projects {
+    block[
+	  #text(weight: "black", project.role + ".")
+//	  #text(".")
+//	  #h(3pt)
+	  #text(weight: "black", project.status + ".")
+//	  #text(".")
+//	  #h(3pt)
+      #text(project.name)
+      #h(1fr)
+      #text(weight: "thin", emph(project.date))	  
+      #v(-5pt)
+      #text("Supported by " + project.company)
+
+      #for point in project.points.map(x => "[" + x + "]")  {
+        list(eval(point))
+      }
+      #v(2pt)
+    ]
+  }
+}
+
 #let projects(projects) = {
-  section-header(title: "项目经历", icon: "./icons/project.svg")
+  section-header(title: "Project", icon: "./icons/project.svg")
 
   set list(indent: 1em, tight: true)
 
@@ -157,7 +249,7 @@
 
 // 实习经历
 #let internships(internships) = {
-  section-header(title: "实习经历", icon: "./icons/internship.svg")
+  section-header(title: "Internship", icon: "./icons/internship.svg")
   set list(indent: 1em, tight: true)
 
   for internship in internships {
@@ -179,7 +271,7 @@
 
 // 荣誉奖项
 #let awards(awards) = {
-  section-header(title: "荣誉奖项", icon: "./icons/award.svg")
+  section-header(title: "Awards", icon: "./icons/award.svg")
   set list(tight: true, marker: none, body-indent: 0pt)
 
   for award in awards {
@@ -194,7 +286,7 @@
 
 // 个人技能
 #let skills(skills) = {
-  section-header(title: "个人技能", icon: "./icons/skill.svg")
+  section-header(title: "Skill", icon: "./icons/skill.svg")
   set list(tight: true, marker: none, body-indent: 0pt)
 
   for skill in skills {
@@ -202,6 +294,22 @@
       #skill.name
       #h(1fr)
       #text(weight: "regular", emph(skill.desc))
+      #v(2pt)
+    ]
+  }
+}
+
+
+#let teachings(teachings) = {
+  section-header(title: "Teaching", icon: "./icons/skill.svg")
+  set list(tight: true, marker: none, body-indent: 0pt)
+  text(emph("Teaching Assistant: "))
+  for teaching in teachings {
+    list[
+	  #h(5pt)
+      #teaching.name
+      #h(1fr)
+      #text(weight: "regular", emph(teaching.date))
       #v(2pt)
     ]
   }

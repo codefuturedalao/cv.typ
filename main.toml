@@ -1,80 +1,132 @@
 [cv]
-name = "胡图图"
-email = "tutuhu@gmail.com"
-phone = "(+86) 820-820-8820"
-website = "https://www.wikiwand.com/zh/大耳朵图图"
-birthday = "2000.06.21"
+name = "Qianlong Sang"
+email = "hacksonsang@gmail.com"
+website = "https://codefuturesql.top"
+school = "Wuhan University"
 # 路径
 avatar = ""
 
-[[educations]]
-school = "翻斗幼儿园"
-major = "软件工程"
-degree = "幼儿园"
-date = "2006.9 - now"
+[[interests]]
+text = "My current research interests focus on leveraging task scheduling and frequency scaling on mobile heterogeneous CPU to meet user performance requirements and achieve power savings. Additionally, I am engaged in some performance profiling work. My future research will shift from traditional application to machine learning tasks."
+
+
 
 [[educations]]
-school = "翻斗学前班"
-major = "计算机科学与技术"
-degree = "学前班"
-date = "2003.9 - 2006.6"
+school = "Wuhan University"
+major = "Computer Science and Technology"
+degree = "Ph.D.->M.S."
+date = "2022.9 - now"
+footnote = "I am considering pursuing a master's degree instead of a Ph.D. for some personal reasons."
+
+[[educations]]
+school = "Wuhan University"
+major = "Cyber Science and Engineering"
+degree = "B.S."
+date = "2018.9 - 2022.6"
+footnote = ""
+
+[[under_reviews]]
+name = "QoE-Aware Power Management Via Scheduling and Governing Co-Optimization on Mobile Devices."
+author_list = "Qianlong Sang, Jinqi Yan, Rui Xie, Chuang Hu, Kun Suo, Dazhao Chen"
+
+[[jr_publications]]
+name = "Incendio: Priority-based Scheduling for Alleviating Cold Start in Serverless Computing."
+where = "IEEE Transactions on Computers"
+abbr = "TC"
+author_list = "XinQuan Cai, Qianlong Sang, Chuang Hu, Yili Gong, Kun Suo, Xiaobo Zhou"
+year = "2024"
+
+
+[[jr_publications]]
+name = "TAPU: A Transmission-Analytics Processing Unit for Accelerating Multifunctions in IoT Gateways."
+where = "IEEE Internet of Things Journal"
+abbr = "IOTJ"
+author_list = "Huanghuang Liang, Qianlong Sang, Chuang Hu, Yili Gong, Dazhao Cheng, Xiaobo Zhou, Yu Wang"
+year = "2023"
+
+[[jr_publications]]
+name = "An Edge-Side Real-Time Video Analytics System With Dual Computing Resource Control."
+where = "IEEE Transactions on Computers"
+abbr = "TC"
+author_list = "Chuang Hu, Rui Lu, Qianlong Sang, Huanghuang Liang, Dan Wang, Dazhao Cheng, Jin Zhang, Qing Li, Junkun Peng"
+year = "2023"
+
+[[jr_publications]]
+name = "DNN Surgery: Accelerating DNN Inference on the Edge Through Layer Partitioning."
+where = "IEEE Transactions on Cloud Computing"
+abbr = "TCC"
+author_list = "Huanghuang Liang, Qianlong Sang, Chuang Hu, Dazhao Cheng, Xiaobo Zhou, Dan Wang, Wei Bao, Yu Wang"
+year = "2023"
+
+
+[[h_projects]]
+name = "DVFS Energy Consumption Modeling and Algorithm Technology Cooperation."
+company = "Huawei Technologies Co., Ltd."
+role = "Technology Lead"
+date = "2024.04 - 2024.12"
+points = ["Responsible for improving the accuracy of load statistics in the system.", "Responsible for enhancing the algorithms for frequency scaling in the system."]
+status = "Ongoing"
+
+[[h_projects]]
+name = "Thread Identification in the Diverse Rendering Pipelines of Mobile Devices."
+company = "OPPO."
+role = "Technology Lead"
+date = "2024.05 - 2025.04"
+points = ["Responsible for analyzing diverse rendering pipeline processes at the upper levels.", "Responsible for instrumenting interfaces that reflect dependency relationships across different layers of the system."]
+status = "Ongoing"
+
+[[h_projects]]
+name = "Scheduling and DVFS Technology for Mobile Devices Performance and Power Consumption Awareness."
+company = "OPPO."
+role = "Technology Lead"
+date = "2021.12 - 2022.11"
+points = ["Responsible for utilizing reinforcement learning algorithms for frequency scaling to make smarter decisions.", "Responsible for achieving performance goals and reducing power consumption through joint scheduling and frequency scaling."]
+status = "Finished"
+
 
 [[projects]]
-name = "Kubernetes"
-url = "https://github.com/kubernetes/kubernetes"
-date = "2014.6 - now"
-desc = "Kubernetes是一个开源的，用于管理云平台中多个主机上的容器化的应用"
-points = ["负责Kubernetes的网络部分", "负责Kubernetes的不知道什么部分"]
-
-[[projects]]
-name = "Linux"
-url = "https://github.com/torvalds/linux"
-date = "2006.6 - 2022.6"
-desc = "Linux是一个开源的操作系统内核"
+name = "WHURISCV"
+url = "https://github.com/codefuturedalao/oscpu-framework"
+date = "2021.07 - 2021.10"
+desc = "A five stages riscv64-I CPU for ysyx in 2021"
 points = [
-    "负责Linux的文件系统部分，包括ext4, btrfs, xfs, f2fs",
-    "负责Linux的网络部分，包括TCP/IP, UDP, SCTP, DCCP, IPv4, IPv6",
+    "Responsible for all the work for the CPU."
 ]
 
 [[projects]]
-name = "翻斗幼儿园每日打卡"
-url = ""
-date = "2019.12 - 2023.1"
-desc = ""
-points = ["可以进行翻斗幼儿园每日打卡", "在线用户超过20"]
+name = "WHUMIPS"
+url = "https://github.com/codefuturedalao/WHUMIPS"
+date = "2020.5 - 2020.8"
+desc = "A five stages mips CPU with cache for NSCSCC in 2020"
+points = [
+    "Responsible for all the work for the CPU."
+]
 
 [[internships]]
-company = "翻斗大街翻斗花园2号楼"
-jobtitle = "端茶倒水"
-date = "2022.4 - 2022.6"
-points = ["负责端茶倒水", "负责浇花"]
-
-[[internships]]
-company = "翻斗幼儿园"
-jobtitle = "扮演小学生"
-date = "2022.4 - 2022.6"
-points = ["和张小帅一起玩", "和张小帅一起吃饭", "和张小帅一起睡觉(误)"]
+company = "OPPO"
+jobtitle = "Research Intern"
+date = "2022.2 - 2022.5"
+points = ["Performance Analysis ", "Power Optimization"]
 
 [[awards]]
-name = "最佳编导奖（获奖）"
-date = "2006.11.8"
+name = "Second-Class Scholarship for Outstanding Students, Wuhan University, 2021"
+date = "2021"
 
 [[awards]]
-name = "优秀长篇美术片奖（获奖）"
-date = "2006.11.8"
+name = "Third Prize, NSCSCC Team Competition, 2020"
+date = "2020"
 
-[[awards]]
-name = "中国电视艺术最高政府奖 - 星光奖"
-date = "2010.1.24"
+[[teachings]]
+name = "Data Structure"
+role = "Teaching Assistant"
+date = "2023"
 
-[[skills]]
-name = "编程语言"
-desc = "C/C++, Python, Java, JavaScript, HTML/CSS, PHP, SQL"
+[[teachings]]
+name = "Operating System"
+role = "Teaching Assistant"
+date = "2021"
 
-[[skills]]
-name = "工具"
-desc = "Git, Vim, VS Code, Linux, Docker, MySQL, MongoDB, Redis"
-
-[[skills]]
-name = "语言"
-desc = "中文, 英语, 日语, 俄语, 法语, 德语, 西班牙语, 阿拉伯语, 葡萄牙语, 意大利语, 希腊语, 土耳其语"
+[[teachings]]
+name = "YSYX Project of Beijing Institute of Open Source Chip"
+role = "Teaching Assistant"
+date = "2021"
